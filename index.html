@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Tag Generator</title>
+    <style>
+    :root{
+        --x:10px;
+    }  
+    body {  
+        background: linear-gradient(180deg,#0d1a2d 0,#042d5e 100%);
+    background-repeat: no-repeat;
+    margin: 0;
+        }
+    .form {
+    height: 10vh;
+    width: 30vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    }
+    .input {
+        color: aliceblue;
+    border: none;
+    border-bottom: 2px solid #5f52ad;
+    width: 20vw;
+    height: 4vh;
+    border-radius: 5px;
+    background-color: #272424;
+    padding-left: 1vw;
+    }
+    .add {
+    color: #00fff7;
+    height: 5vh;
+    width: max-content;
+    margin: 1vw;
+    border-radius: 5px;
+    background-color: #13396b;
+    border: none;
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+    border-radius: 10rem;
+    font-style: italic;
+    box-shadow: 2px 2px 2px -1px deepskyblue;
+    cursor: pointer;
+    }
+    .generate{
+     text-align: center;
+    background-color: #000000;
+    width: 97vw;
+    margin: 1vh 1vw;
+    min-height: 72vh;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(200px,1fr));
+    }
+    .error {
+            color: red;}
+
+    .title {
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 5vh;
+    font-size: xxx-large;
+    color: #5d9ad7;
+    -webkit-box-reflect: below -15px Linear-gradient(transparent, rgba(0,0,0,0.3));
+    }
+
+    .title>div {
+    display: inline-block;
+    animation: title-anim 1.5s infinite;
+    animation-fill-mode:both linear;
+    animation-delay: calc(0.1s *var(--for-delay));
+
+    }
+    @keyframes title-anim {
+        0%{
+            transform: translateY(0);}
+        33% {
+            transform: translateY(-20px);}
+        100% {
+            transform: translateY(0);}
+        }
+    /* for med */
+    @media (min-width: 768px) and (max-width:1000px) {
+        .generate {
+            grid-template-columns: repeat(3,minmax(200px,1fr));
+        }
+    }
+    /* for mobile */
+    @media (max-width: 768px) {
+        .generate {
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+        }
+        .container {
+            width: 40vw;
+        }
+        .delete {
+            right: -37vw;
+        }
+        .theName {margin-top:50px;}
+    }
+    input[type="color"] {
+        width: 40px;
+        height: 40px;
+        border: none;
+        outline: none;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: absolute;
+        z-index: 1;
+    }
+    input[type="color"]:nth-child(1) {
+        top: calc(var(--x) + 0px);
+        left:2vw;
+    }
+    input[type="color"]:nth-child(2) {
+        top: calc(var(--x) + 30px);
+        left:2vw;
+    }
+    input[type="color"]:nth-child(3) {
+        top: calc(var(--x) + 60px);
+        left:2vw;
+    }
+    input[type="color"]:nth-child(4) {
+        top: calc(var(--x) + 90px);
+        left:2vw;
+    }
+    input[type="color"]:nth-child(5) {
+        top: calc(var(--x) + 120px);
+        left:2vw;
+    }
+    input[type="color"]:hover {
+         cursor: pointer;
+         transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="color">    
+            <input type="color" value="#000000" class="color1" title="Color 1 for background">
+            <input type="color" value="#3906f4" class="color2" title="Color 1 for background">
+            <input type="color" value="#ffffff" class="color3" title="Color Hello ">
+            <input type="color" value="#1b4884" class="color4" title="Color for the Text">
+            <input type="color" value="#ffffff" class="color5" title="Color for the Text-background">
+        </div>
+        <div class="title">
+            <div style="--for-delay:1">N</div>
+            <div style="--for-delay:2">a</div>
+            <div style="--for-delay:3">m</div>
+            <div style="--for-delay:4">e </div>
+            <div style="--for-delay:5"> </div>
+            <div style="--for-delay:6">T</div>
+            <div style="--for-delay:7">a</div>
+            <div style="--for-delay:8">g</div>
+        </div>
+        <div class="form">
+            <input type="text" class="input" autofocus placeholder="Enter your name" /> <i class="fa-solid fa-rectangle-xmark"></i>
+            <input type="submit" class="add" value="Generate" />
+        </div> 
+        <div class="generate" >
+        
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
