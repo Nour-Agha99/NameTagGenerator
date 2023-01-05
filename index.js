@@ -8,6 +8,13 @@ let ehello = document.querySelector(".color3");
 let enm = document.querySelector   (".color4");
 let ebnm = document.querySelector  (".color5");
 var count=0;
+// I do not want use this function becase it is not logical :)
+function randomColor(){
+var  x = Math.floor(Math.random() * 250);
+var  y = Math.floor(Math.random() * 250);
+var  z = Math.floor(Math.random() * 250);
+return `rgb(${x} ${y} ${z})`;
+}
 //added buttons 
 document.querySelector(".add").onclick = function() {
   if (nameText.value != '')
