@@ -41,7 +41,7 @@ document.querySelector(".add").onclick = function() {
       {
       deleteAll = document.createElement("button");
       deleteAll.className = "deleteAll";
-      deleteAll.style = "color: rgb(255 255 255);background-color: rgb(97 86 183);right:5vw;top:21vh;border:none;border-radius:5px;position:absolute;height: 26px;width: max-content;font-size: 1vw;cursor:pointer;";
+      deleteAll.style = "color: rgb(255 255 255);background-color: rgb(97 86 183);right:5vw;top:21vh;border-radius: 2px;border: 0.2px solid white;position:absolute;height: 26px;width: max-content;font-size: 1vw;cursor:pointer;";
       deleteAll.textContent = "Clear All";
       outputText.appendChild(deleteAll);
       }
