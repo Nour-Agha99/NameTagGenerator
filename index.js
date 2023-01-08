@@ -2,7 +2,6 @@ let nameText = document.querySelector(".input");
 let outputText = document.querySelector(".generate");
 let add = document.querySelector(".add");
 let ebg1 = document.querySelector  (".color1");
-console.log (ebg1.value);
 let ebg2 = document.querySelector  (".color2");
 let ehello = document.querySelector(".color3");
 let enm = document.querySelector   (".color4");
@@ -19,8 +18,8 @@ return `rgb(${x} ${y} ${z})`;
 document.querySelector(".add").onclick = function() {
   if (nameText.value != '')
     { 
-      bg1= ebg1.value;
-      bg2= ebg2.value;
+      bg1= randomColor();
+      bg2= randomColor();
       hello= ehello.value;
       nm= enm.value;
       bnm=ebnm.value ;
